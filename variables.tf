@@ -57,4 +57,5 @@ variable "service_team_name" {
 variable "service_team_object_id" {
   description = "The Entra object id for the Service Team"
   type        = string
+  default     = ""
 }
