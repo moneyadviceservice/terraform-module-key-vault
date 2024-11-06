@@ -10,10 +10,9 @@ locals {
 }
 
 resource "azurerm_key_vault_access_policy" "service_team_access" {
-  count        = var.service_team_name != "" ? 1 : 0
   key_vault_id = azurerm_key_vault.this.id
 
-  object_id = var.service_team_name
+  object_id = local.service_team_object_id
   tenant_id = data.azurerm_client_config.current.tenant_id
 
   key_permissions = [
