@@ -48,3 +48,15 @@ variable "network_acls_allowed_subnet_ids" {
   type        = list(string)
   default     = []
 }
+
+variable "service_team_name" {
+  description = "The name of the Service Team e.g. MHPD"
+  type        = string
+  default     = ""
+}
+
+variable "service_team_object_id" {
+  description = "The Entra object id for the Service Team"
+  type        = string
+  default     = ""
+}
