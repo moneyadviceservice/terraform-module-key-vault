@@ -41,6 +41,7 @@ resource "azurerm_key_vault_access_policy" "service_team_access" {
 
   secret_permissions = [
     "List",
+    "Get",
     "Set",
     "Delete",
     "Recover",
