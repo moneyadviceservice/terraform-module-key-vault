@@ -10,6 +10,8 @@ locals {
 }
 
 resource "azurerm_key_vault_access_policy" "service_team_access" {
+  count = var.service_team_object_id != "" ? 1 : 0
+
   key_vault_id = azurerm_key_vault.this.id
 
   object_id = local.service_team_object_id
